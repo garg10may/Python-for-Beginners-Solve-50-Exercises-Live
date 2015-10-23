@@ -1,8 +1,9 @@
-'''The International Civil Aviation Organization (ICAO) alphabet assigns code words to the letters
- of the English alphabet acrophonically (Alfa for A, Bravo for B, etc.) so that critical combinations 
- of letters (and numbers) can be pronounced and understood by those who transmit and receive voice 
- messages by radio or telephone regardless of their native language, especially when the safety of 
- navigation or persons is essential. Here is a Python dictionary covering one version of the ICAO alphabet:
+'''
+The International Civil Aviation Organization (ICAO) alphabet assigns code words to the letters
+of the English alphabet acrophonically (Alfa for A, Bravo for B, etc.) so that critical combinations 
+of letters (and numbers) can be pronounced and understood by those who transmit and receive voice 
+messages by radio or telephone regardless of their native language, especially when the safety of 
+navigation or persons is essential. Here is a Python dictionary covering one version of the ICAO alphabet:
 
 d = {'a':'alfa', 'b':'bravo', 'c':'charlie', 'd':'delta', 'e':'echo', 'f':'foxtrot',
      'g':'golf', 'h':'hotel', 'i':'india', 'j':'juliett', 'k':'kilo', 'l':'lima',
@@ -16,7 +17,8 @@ On a mac, you have access to the system TTS (Text-To-Speech) as follows: os.syst
 where msg is the string to be spoken. (Under UNIX/Linux and Windows, something similar might exist.)
 Apart from the text to be spoken, your procedure also needs to accept two additional parameters:
 a float indicating the length of the pause between each spoken ICAO word, and a float indicating
-the length of the pause between each word spoken.'''
+the length of the pause between each word spoken.
+'''
 
 import pyttsx
 

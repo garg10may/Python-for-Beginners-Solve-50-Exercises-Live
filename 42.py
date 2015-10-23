@@ -31,19 +31,24 @@ text = "Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a l
 Did he mind? Adam Jones Jr. thinks he didn't. In any case, \
 this isn't true... Well, with a probability of .9 it isn't."
 
+# Method 1
 for i in re.findall(r'[A-Z][a-z]+\.?.*?[.?!](?= [A-Z]|$)', text):
     print i
 
 print '*'*80
 
-for i in re.findall(r'''[A-Z][a-z]+\.?  # Starts with Capital includes (Mr., Mrs.)
-                        .*?             # followed by anything
-                        [.?!]           # ends with a (.)(?)(!)
-                        (?=\s[A-Z]|$)    # is followed by whitespace and a capital letter''', text, re.X):
+#Method 2 - using verbose mode. 
+for i in re.findall(r'''
+						[A-Z][a-z]+\.?   # Starts with Capital includes (Mr., Mrs.)
+                        .*?              # followed by anything
+                        [.?!]            # ends with a (.)(?)(!)
+                        (?=\s[A-Z]|$)    # is followed by whitespace and a capital letter
+                     ''', text, re.X):
     print i
 
-print '*'*80
+print '*'*80 
 
+#Method 3
 for i in re.split(r'(?<=[^Mr|Mrs|Dr][.?!])\s(?=[A-Z])', text):
     print i
 

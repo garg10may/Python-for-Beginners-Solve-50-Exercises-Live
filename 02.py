@@ -1,6 +1,6 @@
 '''
 Define a function max_of_three() that takes three numbers as
- arguments and returns the largest of them.
+arguments and returns the largest of them.
 '''
 
 def max_of_three(a,b,c):

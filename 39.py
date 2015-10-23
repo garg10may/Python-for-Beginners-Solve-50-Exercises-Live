@@ -16,10 +16,32 @@ Take a guess.
 18
 Good job, Torbj�rn! You guessed my number in 3 guesses!
 '''
+
+# Method 1 - using while loop
+import random
+
+name = raw_input("Hello! What is your name?\n")
+print "Well, " + name + ", I am thinking of a number between 1 and 20"
+no = random.randint(1,20)
+guess = int(raw_input("Take a guess\n"))
+count =1
+
+while guess != no:    
+    if guess < no:
+        print "Your guess is too low."                 
+    if guess > no:
+        print "Your guess is too high"
+    count +=1
+    guess = int(raw_input("Take a guess\n"))
+
+print "Good job, %s! You guessed my number in %d guesses!" % (name ,count)
+
+
+#Method 2 using recursion. Here global makes count available to local scope of your function.
 import random
 
 def check():
-    global count  # good example of use of global
+    global count  
     guess = int(raw_input("Take a guess\n"))
     if guess == no:
         print "Good job, %s! You guessed my number in %d guesses!" %(name,count)
@@ -39,24 +61,3 @@ print no
 global count
 count  =1
 check()
-
-'''
-import random
-
-name = raw_input("Hello! What is your name?\n")
-print "Well, " + name + ", I am thinking of a number between 1 and 20"
-no = random.randint(1,20)
-guess = int(raw_input("Take a guess\n"))
-count =1
-
-while guess != no:    
-    if guess < no:
-        print "Your guess is too low."                 
-    if guess > no:
-        print "Your guess is too high"
-    count +=1
-    guess = int(raw_input("Take a guess\n"))
-
-print "Good job, %s! You guessed my number in %d guesses!" % (name ,count)
-
-'''

@@ -9,7 +9,5 @@ def maps(x):
     
     
 maps(['apple','orange','cat'])
-
 l = ['apple','orange','cat']
-
 print map( len, l)

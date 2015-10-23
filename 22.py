@@ -1,4 +1,5 @@
-'''In cryptography, a Caesar cipher is a very simple encryption techniques in which each letter in the plain text is replaced by a
+'''
+In cryptography, a Caesar cipher is a very simple encryption techniques in which each letter in the plain text is replaced by a
 letter some fixed number of positions down the alphabet. For example,
 with a shift of 3, A would be replaced by D, B would become E, and so on.
 The method is named after Julius Caesar, who used it to communicate with his generals. 
@@ -16,7 +17,9 @@ Your task in this exercise is to implement an encoder/decoder of ROT-13.
 Once you're done, you will be able to read the following secret message:
 
 Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!
-Note that since English has 26 characters, your ROT-13 program will be able to both encode and decode texts written in English.'''
+Note that since English has 26 characters, your ROT-13 program will be able to both encode and decode texts written in English.
+'''
+
 
 def rot_decoder(x):
     new =[]
@@ -33,6 +36,7 @@ def rot_decoder(x):
     
 rot_decoder('Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!')
 
+# Our decoder function can also encode the message since we have 26 characters. But in case if isn't you can use below strategy. 
 def rot_encoder(x):
     key_inverse = { v:k for k,v in d.items()} 
     for i in x:

@@ -1,4 +1,5 @@
-'''Your task in this exercise is as follows:
+'''
+Your task in this exercise is as follows:
 
 Generate a string with N opening brackets ("[") and N closing brackets ("]"), in some arbitrary order.
 Determine whether the generated string is balanced; that is, whether it consists entirely of pairs
@@ -7,9 +8,10 @@ Examples:
 
    []        OK   ][        NOT OK
    [][]      OK   ][][      NOT OK
-   [[][]]    OK   []][[]    NOT OK'''
-import random
+   [[][]]    OK   []][[]    NOT OK
+'''
 
+import random
 
 def find_balanced(n):
     count_left, count_right = 0,0

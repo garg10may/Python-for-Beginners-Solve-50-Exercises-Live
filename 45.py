@@ -1,21 +1,34 @@
 '''
 A certain childrens game involves starting with a word in a particular category. Each participant in
- turn says a word, but that word must begin with the final letter of the previous word. 
- Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, 
- they fall out of the game. For example, with "animals" as the category,
+turn says a word, but that word must begin with the final letter of the previous word. 
+Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, 
+they fall out of the game. For example, with "animals" as the category,
 
 Child 1: dog 
 Child 2: goldfish
 Child 1: hippopotamus
 Child 2: snake
-...
+
 Your task in this exercise is as follows: Take the following selection of 70 English Pokemon names 
 (extracted from Wikipedia's list of Pokemon) and generate the/a sequence with the highest possible
- number of Pokemon names where the subsequent name starts with the final letter of the preceding name.
-  No Pokemon name is to be repeated.'''
+number of Pokemon names where the subsequent name starts with the final letter of the preceding name.
+No Pokemon name is to be repeated.
+
+audino bagon baltoy banette bidoof braviary bronzor carracosta charmeleon
+cresselia croagunk darmanitan deino emboar emolga exeggcute gabite
+girafarig gulpin haxorus heatmor heatran ivysaur jellicent jumpluff kangaskhan
+kricketune landorus ledyba loudred lumineon lunatone machamp magnezone mamoswine
+nosepass petilil pidgeotto pikachu pinsir poliwrath poochyena porygon2
+porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
+sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
+tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask
+'''
+
+
+
+
 from collections import defaultdict
 import time
-
 
 pokemon = '''audino bagon baltoy banette bidoof braviary bronzor carracosta charmeleon
 cresselia croagunk darmanitan deino emboar emolga exeggcute gabite
@@ -26,6 +39,8 @@ porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
 sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
 tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask'''.split()
 
+
+# Method 1
 def find(chain):
     last_character = chain[-1][-1]
     options = d[last_character] - set(chain)
@@ -47,7 +62,9 @@ print max( (find([word]) for word in pokemon), key=len)
 end = time.clock()
 print end - start
 
-#try bottom down approach
+
+
+# Method 2 try bottom down approach
 def find2(chain):
     first_character = chain[0][0]
     options = d[first_character] -set(chain)
@@ -66,7 +83,9 @@ print max( (find2([word]) for word in pokemon), key=len)
 end = time.clock()
 print end - start 
 
-'''
+
+
+# Method 3 - Using loop instead of generator expression
 def find(chain):
     l=[]
     last_character = chain[-1][-1]
@@ -79,7 +98,7 @@ def find(chain):
             l.append(find(chain+[i]))
         return max(l, key=len)
             
-        #return [ find(chain+[i]) for i in options]        
+        #return [ find(chain+[i]) f=or i in options]        
         
 pokemon = set(pokemon)
 
@@ -89,6 +108,11 @@ for word in pokemon:
 
 print max( [find([word]) for word in pokemon], key=len)
 
+
+
+
+
+# Just try it out to have a better understanding how return plays an important role in recursion
 
 def find(chain):
     last_character = chain[-1][-1]
@@ -109,7 +133,7 @@ for word in pokemon:
     d[word[0]].add(word)
 
 print [find([word]) for word in pokemon]
-'''
+
 
 
 

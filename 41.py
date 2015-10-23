@@ -18,6 +18,8 @@ Clue: [t][i]m[e]s
 tiger
 Clue: [t][i][g][e][r]
 '''
+
+
 def lingo(x):
     n = raw_input('Please input your five letter guess!\n')
     
