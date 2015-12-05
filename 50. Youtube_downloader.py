@@ -16,7 +16,8 @@ d = urlopen(direct_url)
 f = open('Test_video.avi', 'wb')
 
 #This will save the video to your default path. To change path use os.chdir(path)
-#Also note this will read the whole file into the memory and than write. We did this to make it words shortest script. Instead read a chunk and write till complete. 
+#Also note this will read the whole file into the memory and than write. We did this to make it words shortest script.
+#Instead read a chunk and write till complete. 
 f.write(d.read())
 
 d.close()
