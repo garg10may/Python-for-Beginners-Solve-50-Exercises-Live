@@ -1,6 +1,6 @@
 # Python-for-Beginners-Solve-50-Exercises-Live
 
-##### Very Simple Exercises
+  ##### Very Simple Exercises
 1. Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Python. (It is true that Python has the max() function built in, but writing it yourself is nevertheless a good exercise.)
 
 2. Define a function max_of_three() that takes three numbers as arguments and returns the largest of them.
@@ -91,7 +91,7 @@
   
       Your task in this exercise is to define a function make_ing_form() which given a verb in infinitive form returns its present participle form. Test your function with words such as lie, see, move and hug. However, you must not expect such simple rules to work for all cases.
 
-##### Higher order functions and list comprehensions
+  ##### Higher order functions and list comprehensions
 
 26. Using the higher order function reduce(), write a function max_in_list() that takes a list of numbers and returns the largest one. Then ask yourself: why define and call a new function, when I can just as well call the reduce() function directly?
 
@@ -105,7 +105,7 @@
 
 31. Implement the higher order functions map(), filter() and reduce(). (They are built-in but writing them yourself may be a good exercise.)
 
-##### Simple exercises including I/O
+  ##### Simple exercises including I/O
 
 32. Write a version of a palindrome recogniser that accepts a file name from the user, reads each line, and prints the line to the screen if it is a palindrome.
 
@@ -225,3 +225,5 @@ Your task in this exercise is as follows: Take the following selection of 70 Eng
   - "waists": makes "wit" and "ass".  
   
 Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that goes through each word in the list and tries to make two smaller words using every second letter. The smaller words must also be members of the list. Print the words to the screen in the above fashion.
+
+
