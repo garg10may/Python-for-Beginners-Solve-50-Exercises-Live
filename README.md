@@ -225,20 +225,18 @@ Examples:
   - "board": makes "bad" and "or".
   - "waists": makes "wit" and "ass".  
   
-Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that goes through each word in the list and tries to make two smaller words using every second letter. The smaller words must also be members of the list. Print the words to the screen in the above fashion.
+  Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that goes through each word in the list and tries to make two smaller words using every second letter. The smaller words must also be members of the list. Print the words to the screen in the above fashion.
+
 
   ##### Fun Exercises
   
 47. Google Code Jam
+  
+  - https://code.google.com/codejam/contest/351101/dashboard#s=p0
+  - https://code.google.com/codejam/contest/351101/dashboard#s=p1
 
-- https://code.google.com/codejam/contest/351101/dashboard#s=p0
-- https://code.google.com/codejam/contest/351101/dashboard#s=p1
+48. Make a Python script that sends an email to a Gmail User. Finally convert it to a bomb. The script will qualify as a bomb if it is able to send 50 emails to the user. 
 
-48. Make a Python script that sends an email to a Gmail User. 
-Finally convert it to a bomb.
-The script will qualify as a bomb if it is able to send 50 emails to the user. 
-
-49. Make a Python script which adds comments to your any of the post on your timeline.
-The script will qualify as a bomb if it is able to comment 50 times on a single post.
+49. Make a Python script which adds comments to your any of the post on your timeline. The script will qualify as a bomb if it is able to comment 50 times on a single post.
 
 50. Make a Python script which downloads the You tube video. The video should be saved for future use.
