@@ -9,8 +9,8 @@ Your task here is write a Python program capable of generating all the verses of
 '''
 
 def song():
-    print '99 bottles of beer on the wall, 99 bottles of beer'
     for i in range(99)[::-1]:
-        print 'Take one down, pass it around,' + str(i) +   ' bottles of beer on the wall.'
+        print str(i+1) + ' bottles of beer on the wall, ' + str(i+1) + ' bottles of beer.'
+        print 'Take one down, pass it around, ' + str(i) +   ' bottles of beer on the wall.'
     
 song()
